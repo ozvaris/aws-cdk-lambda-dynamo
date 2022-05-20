@@ -26,7 +26,7 @@ const config: Configuration = {
   output: {
     libraryTarget: "commonjs2",
     path: resolve(__dirname, "build"),
-    filename: "[name]:[name].js",
+    filename: "[name]-[name].js",
   },
 };
 
