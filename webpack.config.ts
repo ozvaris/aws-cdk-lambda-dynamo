@@ -14,11 +14,14 @@ const config: Configuration = {
         use: {
           loader: "ts-loader",
           options: {
-            // pass special tsconfig file
+            configFile: "tsconfig.webpack.json",
           },
         },
       },
     ],
+  },
+  externals: {
+    "aws-sdk": "aws-sdk",
   },
   resolve: {
     extensions: [".ts", ".js"],
@@ -26,7 +29,7 @@ const config: Configuration = {
   output: {
     libraryTarget: "commonjs2",
     path: resolve(__dirname, "build"),
-    filename: "[name]-[name].js",
+    filename: "[name]/[name].js",
   },
 };
 
